@@ -40,8 +40,10 @@ services:
     image: mariadb:10.9.4
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MARIADB_ROOT_PASSWORD: root
       MARIADB_DATABASE: db_name
+      MARIADB_USER: user
+      MARIADB_PASSWORD: pass
     ports:
       - "3306:3306"
     volumes:
